@@ -41,6 +41,10 @@ function onFormSubmit(e) {
     message: messageEl.value,
   };
 
+  if (emailEl.value === '' || messageEl.value === '') {
+    return alert('Всі поля потрібно заповнити!');
+  }
+
   console.log(formData);
   localStorage.removeItem(INPUT_KEY);
   formEl.reset();
